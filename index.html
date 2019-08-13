@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_1</title>
+</head>
+<body>
+
+
+<script>
+    document.write('Задание 1' + '<br>');
+
+    let loop = (times=0, callback=null) => {
+        if(callback !== null) {
+            for (let i = 0; i < times; i++) {
+                document.write(callback);
+            }
+        }
+    };
+
+    let callback = () => {return 'Callback' + '<br>'};
+    loop (2, callback());
+    loop (5);
+
+
+</script>
+</body>
+</html>
