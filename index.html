@@ -6,7 +6,6 @@
 </head>
 <body>
 
-<script src="Human"></script>
 <script>
     document.write('Задание 1' + '<br><br>');
 
@@ -70,6 +69,27 @@
     Object.entries(answer).forEach(([key, value]) => {
         console.log(`${key}: ${value},`);
     });
+
+
+    console.log('Задание 5');
+
+    let cycle = () => {setTimeout(() => {
+        for(let i = 0; i <=10; i++) {
+            let promise = new Promise((resolve, reject) => {
+                let answer = 'https://jsonplaceholder.typicode.com/users/' + i;
+                if (answer) {
+                    resolve('answer from ' + answer + '\n');
+                } else {
+                    reject(Error("Wrong address"));
+                }
+            });
+            promise.then((answer) => {console.log(answer)})
+                .catch((answer) => {console.log(answer)});
+        }}, 1000)
+    };
+    cycle();
+
+
 
 </script>
 </body>
