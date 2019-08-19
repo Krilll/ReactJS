@@ -1,10 +1,9 @@
 const path = require ('path');
-const textPlugin = require('extract-text-webpack-plugin');
 const htmlPlugin = require('html-webpack-plugin');
 
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, 'src', 'index.js')
+        main: path.resolve(__dirname, 'src', 'index.jsx')
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -13,7 +12,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader'
@@ -21,15 +20,11 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: textPlugin.extract ({
-                    fallback: 'style-loader',
-                    use: ['css-loader']
-                })
+                use: ['style-loader', 'css-loader']
             }
         ]
     },
     plugins: [
-        new textPlugin ({filename: 'style.css'}),
         new htmlPlugin ({
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html'
