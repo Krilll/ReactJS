@@ -1,0 +1,28 @@
+.mainMenu li {
+    display: inline-block;
+}
+.mainMenu {
+    text-align: center;
+}
+.mainMenu, .saidMenu {
+    list-style-type: none;
+    background-color: black;
+    border-radius: 10px;
+}
+.mainMenu a, .saidMenu a {
+    color: whitesmoke;
+    text-decoration: none;
+}
+.mainMenu a:hover, .saidMenu a:hover {
+    color: red;
+}
+.mainMenu li, .saidMenu li {
+    margin: 5px;
+    padding: 5px;
+}
+.saidMenu {
+    width: 70px;
+}
+.saidMenu li {
+    margin-left: -10px;
+}
