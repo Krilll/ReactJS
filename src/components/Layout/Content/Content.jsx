@@ -7,7 +7,7 @@ export default class Content extends Component {
         const {items_article} = this.props;
         return (
             <Fragment>
-                { items_article.map (el => <div className="article"> <h4> { el.title } </h4> <p> { el.article } </p> </div>) }
+                { items_article.map (el => <div className = "article"> <h4> { el.title } </h4> <p> { el.article } </p> </div>) }
             </Fragment>
         )
     }

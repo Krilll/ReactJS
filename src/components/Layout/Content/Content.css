@@ -1,7 +1,9 @@
 .news {
-    margin-top: -180px;
+    margin-top: -243px;
     margin-left: 120px;
+    margin-right: 10px;
 }
+
 .news .article {
     background-color: black;
     border-radius: 10px;
