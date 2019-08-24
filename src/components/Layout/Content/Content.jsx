@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import ReactDom from 'react-dom'
+//import ReactDom from 'react-dom'
 import './Content.css'
 
 export default class Content extends Component {
@@ -7,7 +7,7 @@ export default class Content extends Component {
         const {items_article} = this.props;
         return (
             <Fragment>
-                { items_article.map (el => <div className = "article"> <h4> { el.title } </h4> <p> { el.article } </p> </div>) }
+                { items_article.map (el => <div className = "article" key = { el.id }> <h4> { el.title } </h4> <p> { el.article } </p> </div>) }
             </Fragment>
         )
     }

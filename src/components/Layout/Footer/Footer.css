@@ -1,0 +1,9 @@
+.footerText {
+    margin-top: 20px;
+    color: black;
+    background-color: #dadada;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 10px;
+}

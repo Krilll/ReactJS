@@ -4,11 +4,12 @@ import './Menu.css'
 
 export default class Menu extends Component {
     render () {
-        const {items_menu, className} = this.props;
+        const {items_menu, name_menu} = this.props;
         return (
             <Fragment>
-               <ul className = { className }>
-                  { items_menu.map (el => <li> <a href = { el.href } > { el.title } </a></li> ) }
+               <ul className = 'mainMenu'>
+                   { <a key = { name_menu.id } className = 'nameMenu' href = { name_menu.href }> { name_menu.title } </a> }
+                   { items_menu.map (el => <li key = { el.key }> <a href = { el.href } > { el.title } </a></li> ) }
                </ul>
             </Fragment>
         )

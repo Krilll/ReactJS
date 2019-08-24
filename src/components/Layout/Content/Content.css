@@ -1,7 +1,7 @@
 .news {
-    margin-top: -243px;
-    margin-left: 120px;
-    margin-right: 10px;
+    margin-top: -13px;
+
+
 }
 
 .news .article {
@@ -10,4 +10,8 @@
     color: whitesmoke;
     padding: 10px;
     margin-bottom: 5px;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
 }

@@ -22,6 +22,14 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpg|gif)$/,
+                use:
+                    {
+                        loader: 'file-loader',
+                        options: {}
+                    }
             }
         ]
     },
@@ -29,6 +37,18 @@ module.exports = {
         new htmlPlugin ({
             template: path.resolve(__dirname, 'src', 'index.html'),
             filename: 'index.html'
+        }),
+        new htmlPlugin ({
+            template: path.resolve(__dirname, 'src', 'about.html'),
+            filename: 'about.html'
+        }),
+        new htmlPlugin ({
+            template: path.resolve(__dirname, 'src', 'posts.html'),
+            filename: 'posts.html'
+        }),
+        new htmlPlugin ({
+            template: path.resolve(__dirname, 'src', 'contact.html'),
+            filename: 'contact.html'
         })
     ]
 };
